@@ -1,1 +1,1 @@
-# api-connect-oauth-tutorial
+This repository contains the resources for the tutorial.
