@@ -1,5 +1,6 @@
 This repository contains the resources for the tutorial:
-**Secure APIs by using OAuth 2.0**
+
+**Secure APIs by using OAuth 2.0** <br/>
 https://developer.ibm.com/tutorials/securing-apis-oauth2-api-connect/
 
 <!-- keep this -->
