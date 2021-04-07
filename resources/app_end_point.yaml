@@ -1,35 +1,37 @@
-swagger: '2.0'
+---
+swagger: "2.0"
 info:
-  x-ibm-name: appendpoint
-  title: AppEndPoint
-  version: 1.0.0
+  x-ibm-name: "appendpoint"
+  title: "AppEndPoint"
+  version: "1.0.0"
 schemes:
-  - https
-host: $(catalog.host)
-basePath: /appendpoint
+- "https"
+host: "$(catalog.host)"
+basePath: "/appendpoint"
 consumes:
-  - application/xml
-  - application/json
+- "application/xml"
+- "application/json"
 produces:
-  - application/xml
-  - application/json
+- "application/xml"
+- "application/json"
 securityDefinitions:
   api-key-1:
-    type: apiKey
-    description: ''
-    in: header
-    name: X-IBM-Client-Id
+    type: "apiKey"
+    description: ""
+    in: "header"
+    name: "X-IBM-Client-Id"
   oauth-1:
-    type: oauth2
-    description: OAuth definition
-    flow: application
+    type: "oauth2"
+    description: "OAuth definition"
+    flow: "accessCode"
     scopes:
-      appscope: ''
-    tokenUrl: 'https://[API Connect Endpoint url]/conf/oauth2/token'
+      appscope: ""
+    tokenUrl: "https://[API Connect Endpoint url]/conf/oauth2/token"
+    authorizationUrl: "https://[API Connect Endpoint url]/conf/oauth2/authorize"
 security:
-  - oauth-1:
-      - appscope
-    api-key-1: []
+- oauth-1:
+  - "appscope"
+  api-key-1: []
 x-ibm-configuration:
   testable: true
   enforced: true
@@ -37,14 +39,14 @@ x-ibm-configuration:
     enabled: true
   assembly:
     execute:
-      - invoke:
-          target-url: 'https://[Node-RED base url]/app'
-  phase: realized
+    - invoke:
+        target-url: "https://[Node-RED base url]/app"
+  phase: "realized"
 paths:
   /ops:
     get:
       responses:
-        '200':
-          description: 200 OK
+        200:
+          description: "200 OK"
 definitions: {}
 tags: []
